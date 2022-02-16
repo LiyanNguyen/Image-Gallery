@@ -44,3 +44,15 @@ images.forEach((img) => {
 });
 
 //======= FUNCTION TO SEARCH BY FILTERS =======//
+
+
+//======= FUNCTION TO WAI FOR ENTIRE FILES TO PARSE FIRST =======//
+let checkIfDocumentFullyLoaded = () => {
+	if (document.readyState === "complete") {
+		// make the entire page visible
+		document.querySelector('body').style.setProperty('display', 'block');
+		// remove the interval call to this function
+		clearInterval(checkPageLoad);
+	}
+};
+let checkPageLoad = setInterval(checkIfDocumentFullyLoaded, 100);
