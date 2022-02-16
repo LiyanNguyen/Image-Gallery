@@ -50,7 +50,7 @@ images.forEach((img) => {
 let checkIfDocumentFullyLoaded = () => {
 	if (document.readyState === "complete") {
 		// make the entire page visible
-		document.querySelector('body').style.setProperty('display', 'block');
+		document.querySelector('body').style.removeProperty('display');
 		// remove the interval call to this function
 		clearInterval(checkPageLoad);
 	}
