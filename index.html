@@ -4,10 +4,12 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<title>Image Gallery</title>
 	<!-- Fontawesome CDN -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 	<link rel="stylesheet" href="index.css">
+	<link rel="stylesheet" href="tablet.css" media="screen and (max-width: 768px)">
+	<link rel="icon" href="images/web-icon.png">
 </head>
 <body style="display: none;">
 	<div id="mobile-menu" class="fas fa-bars"></div>
@@ -15,26 +17,26 @@
 	<aside class="sidebar">
 		<h1 class="heading">filter images</h1>
 		<div class="box">
-			<h3 class="title">keywords: </h3>
+			<h3 class="title">by keywords: </h3>
 			<input type="text" placeholder="type in keywords..." id="search-box">
 		</div>
 		<div class="box">
-			<h3 class="title">category: </h3>
-			<div class="category">
-				<div class="btn active" data-category="all">any</div>
-				<div class="btn" data-category="animal">animals</div>
-				<div class="btn" data-category="food">food</div>
-				<div class="btn" data-category="fish">fish</div>
-				<div class="btn" data-category="flower">flower</div>
+			<h3 class="title">or by category: </h3>
+			<div>
+				<button class="category-btn" img-category="all">any</button>
+				<button class="category-btn" img-category="animal">animals</button>
+				<button class="category-btn" img-category="food">food</button>
+				<button class="category-btn" img-category="fish">fish</button>
+				<button class="category-btn" img-category="flower">flower</button>
 			</div>
 		</div>
 		<div class="box">
-			<h3 class="title">file type: </h3>
-			<div class="category">
-				<div class="btn active" data-type="all">any</div>
-				<div class="btn" data-type="jpg">jpg</div>
-				<div class="btn" data-type="png">png</div>
-				<div class="btn" data-type="svg">svg</div>
+			<h3 class="title">or by file type: </h3>
+			<div>
+				<button class="type-btn" img-type="all">any</button>
+				<button class="type-btn" img-type="jpg">jpg</button>
+				<button class="type-btn" img-type="png">png</button>
+				<button class="type-btn" img-type="svg">svg</button>
 			</div>
 		</div>
 	</aside>
@@ -43,26 +45,26 @@
 	<section class="gallery">
 		<h1 class="heading">gallery</h1>
 		<div class="image-container">
-			<img class="img" src="images/img-1.jpg" data-cat="animal" data-search="animal bird cute chicks" alt="">
-			<img class="img" src="images/img-2.svg" data-cat="food" data-search="vector cookies christmas" alt="">
-			<img class="img" src="images/img-3.png" data-cat="food" data-search="food corn cartoon png" alt="">
-			<img class="img" src="images/img-4.jpg" data-cat="fish" data-search="animal fish dolphin" alt="">
-			<img class="img" src="images/img-5.jpg" data-cat="animal" data-search="animal squirrel cute" alt="">
-			<img class="img" src="images/img-6.png" data-cat="animal" data-search="animal panda png cartoon" alt="">
-			<img class="img" src="images/img-7.svg" data-cat="animal" data-search="animal penguine bird cartoon" alt="">
-			<img class="img" src="images/img-8.jpg" data-cat="animal" data-search="animal bird cute" alt="">
-			<img class="img" src="images/img-9.png" data-cat="animal" data-search="animal cat mouse cute png" alt="">
-			<img class="img" src="images/img-10.svg" data-cat="fish" data-search="animal fish shark vector" alt="">
-			<img class="img" src="images/img-11.jpg" data-cat="food" data-search="food orange" alt="">
-			<img class="img" src="images/img-12.svg" data-cat="food" data-search="food vector juice drink" alt="">
-			<img class="img" src="images/img-13.png" data-cat="food" data-search="food chicken cartoon png" alt="">
-			<img class="img" src="images/img-14.jpg" data-cat="food" data-search="food coffee bread breakfast" alt="">
-			<img class="img" src="images/img-15.png" data-cat="food" data-search="food burger png cartoon" alt="">
-			<img class="img" src="images/img-16.svg" data-cat="food" data-search="food popcorn vector" alt="">
-			<img class="img" src="images/img-17.jpg" data-cat="food" data-search="food pancake breakfast" alt="">
-			<img class="img" src="images/img-18.svg" data-cat="flower" data-search="flower plants nature vector" alt="">
-			<img class="img" src="images/img-19.png" data-cat="flower" data-search="flower plants nature cartoon" alt="">
-			<img class="img" src="images/img-20.jpg" data-cat="flower" data-search="flower plants nature" alt="">
+			<img class="img" src="images/img-1.jpg" img-cat="animal" img-keywords="animal bird cute chicks" alt="">
+			<img class="img" src="images/img-2.svg" img-cat="food" img-keywords="vector cookies christmas" alt="">
+			<img class="img" src="images/img-3.png" img-cat="food" img-keywords="food corn cartoon png" alt="">
+			<img class="img" src="images/img-4.jpg" img-cat="fish" img-keywords="animal fish dolphin" alt="">
+			<img class="img" src="images/img-5.jpg" img-cat="animal" img-keywords="animal squirrel cute" alt="">
+			<img class="img" src="images/img-6.png" img-cat="animal" img-keywords="animal panda png cartoon" alt="">
+			<img class="img" src="images/img-7.svg" img-cat="animal" img-keywords="animal penguine bird cartoon" alt="">
+			<img class="img" src="images/img-8.jpg" img-cat="animal" img-keywords="animal bird cute" alt="">
+			<img class="img" src="images/img-9.png" img-cat="animal" img-keywords="animal cat mouse cute png" alt="">
+			<img class="img" src="images/img-10.svg" img-cat="fish" img-keywords="animal fish shark vector" alt="">
+			<img class="img" src="images/img-11.jpg" img-cat="food" img-keywords="food orange" alt="">
+			<img class="img" src="images/img-12.svg" img-cat="food" img-keywords="food vector juice drink" alt="">
+			<img class="img" src="images/img-13.png" img-cat="food" img-keywords="food chicken cartoon png" alt="">
+			<img class="img" src="images/img-14.jpg" img-cat="food" img-keywords="food coffee bread breakfast" alt="">
+			<img class="img" src="images/img-15.png" img-cat="food" img-keywords="food burger png cartoon" alt="">
+			<img class="img" src="images/img-16.svg" img-cat="food" img-keywords="food popcorn vector" alt="">
+			<img class="img" src="images/img-17.jpg" img-cat="food" img-keywords="food pancake breakfast" alt="">
+			<img class="img" src="images/img-18.svg" img-cat="flower" img-keywords="flower plants nature vector" alt="">
+			<img class="img" src="images/img-19.png" img-cat="flower" img-keywords="flower plants nature cartoon" alt="">
+			<img class="img" src="images/img-20.jpg" img-cat="flower" img-keywords="flower plants nature" alt="">
 		</div>
 	</section>
 	<div class="popup-image-container">
