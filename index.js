@@ -131,18 +131,18 @@ darkToggleButton.onclick = () => {
 	isDarkMode = !isDarkMode;
 
 	if (isDarkMode) {
-    // switch to dark-mode
-    documentRoot.style.setProperty("--background-color", "#010409");
+		// switch to dark-mode
+		documentRoot.style.setProperty("--background-color", "#010409");
 		documentRoot.style.setProperty("--sidebar-bg", "#0D1117");
 		documentRoot.style.setProperty("--text-color", "#eee");
 		documentRoot.style.setProperty("--component-bg", "#666");
 	}
 	
 	else {
-    // switch to light-mode
-    documentRoot.style.setProperty("--background-color", "#eee");
+		// switch to light-mode
+		documentRoot.style.setProperty("--background-color", "#eee");
 		documentRoot.style.setProperty("--sidebar-bg", "white");
 		documentRoot.style.setProperty("--text-color", "#333");
-    documentRoot.style.setProperty("--component-bg", "#eee");
-  }
+		documentRoot.style.setProperty("--component-bg", "#eee");
+	}
 }
