@@ -4,7 +4,7 @@
 
 ### A Single Page Web Application Image Gallery
 
-where users can view, search, filter, images in the gallery as well as upload images to add into the gallery
+where users can view, search, filter, images in the gallery
 
 ### Demo:
 https://liyannguyen.github.io/Image-Gallery/
