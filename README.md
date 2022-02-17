@@ -1,6 +1,7 @@
 # Image-Gallery
 
-![ss3](https://user-images.githubusercontent.com/50958126/154396568-0077f0be-f64d-49f5-bf2e-540bd7118190.png)
+![image](https://user-images.githubusercontent.com/50958126/154527544-572be636-b64d-430a-9e48-542ec4a31110.png)
+
 
 ### A Single Page Web Application Image Gallery
 
