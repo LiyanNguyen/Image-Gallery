@@ -7,6 +7,7 @@ let images = document.querySelectorAll('.img');
 let searchBox = document.querySelector('#search-box');
 let categoryButton = document.querySelectorAll(".category-btn");
 let typeButton = document.querySelectorAll(".type-btn");
+let darkToggleButton = document.querySelector("#dark-theme-toggle");
 
 //======= FUNCTION ON CLICKING MENU ON MOBILE =======//
 menu.onclick = () => {
@@ -121,3 +122,27 @@ let checkIfDocumentFullyLoaded = () => {
 	}
 };
 let checkPageLoad = setInterval(checkIfDocumentFullyLoaded, 100);
+
+//======= FUNCTION TO TOGGLE TO DARK MODE =======//
+let documentRoot = document.querySelector(":root");
+let isDarkMode = false;
+
+darkToggleButton.onclick = () => {
+	isDarkMode = !isDarkMode;
+
+	if (isDarkMode) {
+    // switch to dark-mode
+    documentRoot.style.setProperty("--background-color", "#010409");
+		documentRoot.style.setProperty("--sidebar-bg", "#0D1117");
+		documentRoot.style.setProperty("--text-color", "#eee");
+		documentRoot.style.setProperty("--component-bg", "#666");
+	}
+	
+	else {
+    // switch to light-mode
+    documentRoot.style.setProperty("--background-color", "#eee");
+		documentRoot.style.setProperty("--sidebar-bg", "white");
+		documentRoot.style.setProperty("--text-color", "#333");
+    documentRoot.style.setProperty("--component-bg", "#eee");
+  }
+}
